@@ -10,10 +10,9 @@ This is a transportation management system that manages drivers orders and custo
 1. **Customer's management**
 2. **Real time truck tracking** 
 3. **Truck management** 
-4. **Customer management** 
-5. **Freight management** 
-6. **Order management** 
-7. **Drivers management** 
+4. **Freight management** 
+5. **Order management** 
+6. **Drivers management** 
 
 
 
