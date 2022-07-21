@@ -6,6 +6,8 @@
 This is a transportation management system that manages drivers orders and customers. Using this platform, the admin will be able to keep track of a customer's deliveries using an optimized algorithm to generate the shortest path (Vehicle Routing Problem) , calculate a truck's speed and predict the remaining road time. Also, another optimized algorithm will be deployed in order to manage a truck's load (freight) based on bin-packing problem.  <br>
 
  ### 📜 Project Main Objectives
+ The main objective of the VRP problem is to design routes for vehicles that depart from a given number of different depots, need to go through several locations to deliver some service, and once the shift is over they return to a set location. The complexity of the operations differs by customer; you can add your business conditions, such as the **load capacity of vehicles**, **the maximum distance they can travel per day** or **the duration of the working shift of your drivers**. The goal of VRO given these conditions is to compute a route which **minimizes the aggregate transport costs** such as the total distance traveled number of vehicles used and/or the total transport time.
+ 
   - All orders need to be delivered on time.
   - Ensure drivers are not rushed to make it on time by using buffer times and real-time distance.
   - Save fuel by reducing the distance driven.
