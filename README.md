@@ -18,3 +18,14 @@ heroku run python
  -from app import db
 <br />
  -db.create_all()
+
+
+
+**Main Features**
+- The core processes to be supported are:
+<br />
+- Registration of customers, and tracking their orders
+<br />
+- Managing locations of the depots to plan the best-possible deliveries
+<br />
+- Keeping track of the trucks, delivering goods according to the planned tours
