@@ -22,10 +22,11 @@ heroku run python
 
 
 **Main Features**
-- The core processes to be supported are:
 <br />
-- Registration of customers, and tracking their orders
+  The core processes to be supported are:
 <br />
-- Managing locations of the depots to plan the best-possible deliveries
+-Registration of customers, and tracking their orders
 <br />
-- Keeping track of the trucks, delivering goods according to the planned tours
+-Managing locations of the depots to plan the best-possible deliveries
+<br />
+-Keeping track of the trucks, delivering goods according to the planned tours
