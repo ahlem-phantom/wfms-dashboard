@@ -14,6 +14,7 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
 import { InterfaceSettingsComponent } from './shared/components/interface-settings/interface-settings.component';
+import { AuthEntityComponent } from './layouts/auth-entity/auth-entity.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { InterfaceSettingsComponent } from './shared/components/interface-settin
     HeaderComponent,
     NavbarComponent,
     MenuComponent,
-    InterfaceSettingsComponent
+    InterfaceSettingsComponent,
+    AuthEntityComponent
     
 
   ],

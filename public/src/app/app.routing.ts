@@ -8,6 +8,7 @@ import { UsersComponent } from './components/users/users.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { AuthGuardService  as AuthGuard } from './core/services/auth-guard/auth-guard.service';
 import { AuthService as LoginGuard } from './core/services/auth/auth.service';
+import { AuthEntityComponent } from './layouts/auth-entity/auth-entity.component';
 const routes: Routes =[
   {
     path: '',
@@ -17,6 +18,12 @@ const routes: Routes =[
   {
     path: 'login',
     component: AuthLayoutComponent,
+    canActivate :[LoginGuard]
+
+  },
+  {
+    path: 'entity',
+    component: AuthEntityComponent,
     canActivate :[LoginGuard]
 
   },

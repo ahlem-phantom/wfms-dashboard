@@ -22,9 +22,7 @@ export class AuthLayoutComponent implements OnInit {
   }
 
   login(myForm:FormGroup){
-    this.submittedLogin = true;
-    localStorage.setItem("currentUser","1");
-    this.router.navigate(["/dashboard"]);
+    this.router.navigate(["/entity"]);
       
   
     
