@@ -15,7 +15,6 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
 import { InterfaceSettingsComponent } from './shared/components/interface-settings/interface-settings.component';
 import { AuthEntityComponent } from './layouts/auth-entity/auth-entity.component';
-
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -36,9 +35,7 @@ import { AuthEntityComponent } from './layouts/auth-entity/auth-entity.component
     NavbarComponent,
     MenuComponent,
     InterfaceSettingsComponent,
-    AuthEntityComponent
-    
-
+    AuthEntityComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

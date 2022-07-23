@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminLayoutRoutes } from './admin-layout.routing';
+import { AppsComponent } from './apps/apps.component';
 import { InboxComponent } from './inbox/inbox.component';
 
 
@@ -14,10 +15,10 @@ import { InboxComponent } from './inbox/inbox.component';
     ReactiveFormsModule,
   ],
   declarations: [  
-    InboxComponent
+    InboxComponent,
+    AppsComponent
   ],
   exports:[
-    InboxComponent
   ]
 
 })

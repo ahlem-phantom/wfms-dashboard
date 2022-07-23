@@ -28,7 +28,7 @@ const routes: Routes =[
 
   },
   {
-    path: 'dashboard',
+    path: '',
     component: AdminLayoutComponent,
     canActivate :[AuthGuard],
     children: [{
@@ -36,14 +36,6 @@ const routes: Routes =[
       loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
     }]
   },
- 
-  
-  /*{
-    path:'user', 
-    loadChildren: () => import('./components/users/users.component').then(m => m.UsersComponent)
-
-  },
-*/
 ];
 
 @NgModule({
