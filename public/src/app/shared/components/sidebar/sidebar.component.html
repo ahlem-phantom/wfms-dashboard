@@ -19,29 +19,18 @@
             </div>
         </div>
         <ul id="js-nav-menu" class="nav-menu">
-            <li class="active open">
-                <a href="#" title="Application Intel" data-filter-tags="application intel">
+            <li routerLinkActive="active" class="active open" *ngFor="let menuItem of menuItems">
+                <a  [routerLink]="[menuItem.path]" title="Application Intel" data-filter-tags="application intel">
                     <i class="fal fa-info-circle"></i>
-                    <span class="nav-link-text" data-i18n="nav.application_intel">Inbox</span>
+                    <span class="nav-link-text" data-i18n="nav.application_intel">{{menuItem.title}}</span>
                 </a>
             </li>
-            <li>
-                <a href="#" title="Theme Settings" data-filter-tags="theme settings">
-                    <i class="fal fa-cog"></i>
-                    <span class="nav-link-text" data-i18n="nav.theme_settings">Modules</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" title="Package Info" data-filter-tags="package info">
-                    <i class="fal fa-tag"></i>
-                    <span class="nav-link-text" data-i18n="nav.package_info">Apps</span>
-                </a>
-        
-            </li>
-
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                   
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/> <br/><br/><br/> <br/><br/><br/> <br/><br/><br/>
         </ul>
+                   
+   
+    
         <div class="filter-message js-filter-message bg-success-600"></div>
         
     </nav>
@@ -55,3 +44,4 @@
     </div> <!-- END NAV FOOTER -->
 
 </aside>
+
