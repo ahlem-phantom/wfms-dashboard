@@ -1,456 +1,545 @@
 <div class="mod-bg-1 ">
     <div class="page-wrapper">
         <div class="page-inner">
-            <app-sidebar></app-sidebar> 
+              <app-sidebar></app-sidebar> 
 
             <!-- END Left Aside -->
             <div class="page-content-wrapper">
                 <!-- BEGIN Page Header -->
-               <app-header></app-header>
+             <app-header></app-header>
                 <!-- END Page Header -->
                 <!-- BEGIN Page Content -->
                 <!-- the #js-page-content id is needed for some plugins to initialize -->
                 <main id="js-page-content" role="main" class="page-content">
-                    <ol class="breadcrumb page-breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">SmartAdmin</a></li>
-                        <li class="breadcrumb-item">Application Intel</li>
-                        <li class="breadcrumb-item active">Analytics Dashboard</li>
-                        <li class="position-absolute pos-top pos-right d-none d-sm-block"><span class="js-get-date"></span></li>
-                    </ol>
-                    <div class="subheader">
-                        <h1 class="subheader-title">
-                            <i class='subheader-icon fal fa-chart-area'></i> Analytics <span class='fw-300'>Dashboard</span>
-                            <small>
-                            </small>
-                        </h1>
-                        <div class="subheader-block d-lg-flex align-items-center">
-                            <div class="d-inline-flex flex-column justify-content-center mr-3">
-                                <span class="fw-300 fs-xs d-block opacity-50">
-                                    <small>EXPENSES</small>
-                                </span>
-                                <span class="fw-500 fs-xl d-block color-primary-500">
-                                    $47,000
-                                </span>
+                    <!-- Page heading removed for composed layout -->
+                    <div class="d-flex flex-grow-1 p-0">
+                        <!-- left slider -->
+                        <div id="js-inbox-menu" class="flex-wrap position-relative bg-white slide-on-mobile slide-on-mobile-left">
+                            <div class="position-absolute pos-top pos-bottom w-100">
+                                <div class="d-flex h-100 flex-column">
+                                    <div class="px-3 px-sm-4 px-lg-5 py-4 align-items-center">
+                                        <div class="btn-group btn-block" role="group" aria-label="Button group with nested dropdown ">
+                                            <button type="button" class="btn btn-danger btn-block fs-md" data-action="toggle" data-class="d-flex" data-target="#panel-compose" data-focus="message-to">Compose</button>
+                                            <div class="btn-group" role="group">
+                                                <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle px-2 js-waves-off" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                                <div class="dropdown-menu p-0" aria-labelledby="btnGroupDrop1">
+                                                    <a class="dropdown-item" href="#">Work group A</a>
+                                                    <a class="dropdown-item" href="#">New page</a>
+                                                    <a class="dropdown-item" href="#">Edit signature</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item" href="#"> <i class="fas fa-plus width-1"></i> Add more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1 pr-3">
+                                        <a href="page_inbox_general.html" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-2 fs-md font-weight-bold d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0 ">
+                                            <div>
+                                                <i class="fas fa-folder-open width-1"></i>Inbox
+                                            </div>
+                                            <div class="fw-400 fs-xs js-unread-emails-count"></div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-2 fs-md d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0">
+                                            <div>
+                                                <i class="fas fa-star width-1"></i>Starred
+                                            </div>
+                                            <div class="fw-400 fs-xs">(6)</div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-2 fs-md d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0">
+                                            <div>
+                                                <i class="fas fa-edit width-1"></i>Draft
+                                            </div>
+                                            <div class="fw-400 fs-xs">(5)</div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-2 fs-md d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0">
+                                            <div>
+                                                <i class="fas fa-paper-plane width-1"></i>Sent
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-2 fs-md d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0">
+                                            <div>
+                                                <i class="fas fa-exclamation-triangle width-1"></i>Spam
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-2 fs-md font-weight-bold d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0">
+                                            <div>
+                                                <i class="fas fa-trash width-1"></i>Trash
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="px-5 py-3 fs-nano fw-500">
+                                        1.5 GB (10%) of 15 GB used
+                                        <div class="progress mt-1" style="height: 7px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 11%;" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#886ab5" sparkHeight="32px" sparkBarWidth="5px" values="3,4,3,6,7,3,3,6,2,6,4"></span>
                         </div>
-                        <div class="subheader-block d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
-                            <div class="d-inline-flex flex-column justify-content-center mr-3">
-                                <span class="fw-300 fs-xs d-block opacity-50">
-                                    <small>MY PROFITS</small>
-                                </span>
-                                <span class="fw-500 fs-xl d-block color-danger-500">
-                                    $38,500
-                                </span>
+                        <div class="slide-backdrop" data-action="toggle" data-class="slide-on-mobile-left-show" data-target="#js-inbox-menu"></div> <!-- end left slider -->
+                        <!-- inbox container -->
+                        <div class="d-flex flex-column flex-grow-1 bg-white">
+                            <!-- inbox header -->
+                            <div class="flex-grow-0">
+                                <!-- inbox title -->
+                                <div class="d-flex align-items-center pl-2 pr-3 py-3 pl-sm-3 pr-sm-4 py-sm-4 px-lg-5 py-lg-4  border-faded border-top-0 border-left-0 border-right-0 flex-shrink-0">
+                                    <!-- button for mobile -->
+                                    <a href="javascript:void(0);" class="pl-3 pr-3 py-2 d-flex d-lg-none align-items-center justify-content-center mr-2 btn" data-action="toggle" data-class="slide-on-mobile-left-show" data-target="#js-inbox-menu">
+                                        <i class="fal fa-ellipsis-v h1 mb-0 "></i>
+                                    </a>
+                                    <!-- end button for mobile -->
+                                    <h1 class="subheader-title ml-1 ml-lg-0">
+                                        <i class="fas fa-folder-open mr-2 hidden-lg-down"></i>
+                                        Inbox
+                                    </h1>
+                                    <div class="d-flex position-relative ml-auto" style="max-width: 23rem;">
+                                        <i class="fas fa-search position-absolute pos-left fs-lg px-3 py-2 mt-1"></i>
+                                        <input type="text" class="form-control bg-subtlelight pl-6" placeholder="Filter emails">
+                                    </div>
+                                </div>
+                                <!-- end inbox title -->
+                                <!-- inbox button shortcut -->
+                                <div class="d-flex flex-wrap align-items-center pl-3 pr-1 py-2 px-sm-4 px-lg-5 border-faded border-top-0 border-left-0 border-right-0">
+                                    <div class="flex-1 d-flex align-items-center">
+                                        <div class="custom-control custom-checkbox mr-2 mr-lg-2 d-inline-block">
+                                            <input type="checkbox" class="custom-control-input" id="js-msg-select-all">
+                                            <label class="custom-control-label bolder" for="js-msg-select-all"></label>
+                                        </div>
+                                        <a href="javascript:void(0);" class="btn btn-icon rounded-circle mr-1">
+                                            <i class="fas fa-redo fs-md"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" class="btn btn-icon rounded-circle mr-1">
+                                            <i class="fas fa-exclamation-circle fs-md"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" id="js-delete-selected" class="btn btn-icon rounded-circle mr-1">
+                                            <i class="fas fa-trash fs-md"></i>
+                                        </a>
+                                    </div>
+                                    <div class="text-muted mr-1 mr-lg-3 ml-auto">
+                                        1 - 50 <span class="hidden-lg-down"> of 135 </span>
+                                    </div>
+                                    <div class="d-flex flex-wrap">
+                                        <button class="btn btn-icon rounded-circle"><i class="fal fa-chevron-left fs-md"></i></button>
+                                        <button class="btn btn-icon rounded-circle"><i class="fal fa-chevron-right fs-md"></i></button>
+                                    </div>
+                                </div>
+                                <!-- end inbox button shortcut -->
                             </div>
-                            <span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#fe6bb0" sparkHeight="32px" sparkBarWidth="5px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div id="panel-1" class="panel panel-locked" data-panel-lock="false" data-panel-close="false" data-panel-fullscreen="false" data-panel-collapsed="false" data-panel-color="false" data-panel-locked="false" data-panel-refresh="false" data-panel-reset="false">
-                                <div class="panel-hdr">
-                                    <h2>
-                                        Live Feeds
-                                    </h2>
-                                    <div class="panel-toolbar pr-3 align-self-end">
-                                        <ul id="demo_panel-tabs" class="nav nav-tabs border-bottom-0 nav-tabs-clean" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" data-toggle="tab" href="#tab_default-1" role="tab">Live Stats</a>
+                            <!-- end inbox header -->
+                            <!-- inbox message -->
+                            <div class="flex-wrap align-items-center flex-grow-1 position-relative bg-gray-50">
+                                <div class="position-absolute pos-top pos-bottom w-100 custom-scroll">
+                                    <div class="d-flex h-100 flex-column">
+                                        <!-- message list (the part that scrolls) -->
+                                        <ul id="js-emails" class="notification notification-layout-2">
+                                            <li class="unread">
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-1">
+                                                        <label class="custom-control-label" for="msg-1"></label>
+                                                    </div>
+                                                    <a href="#" title="starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg color-warning-500 order-3 order-lg-2"><i class="fas fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Melissa Ayre</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Re: New security codes (2)</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">8:31PM</div>
+                                                </div>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-toggle="tab" href="#tab_default-2" role="tab">Revenue</a>
+                                            <li class="unread">
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-2">
+                                                        <label class="custom-control-label" for="msg-2"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Adison Le</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Welcome to the new portal, here is what you need to do</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">6:22PM</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-3">
+                                                        <label class="custom-control-label" for="msg-3"></label>
+                                                    </div>
+                                                    <a href="#" title="starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg color-warning-500 order-3 order-lg-2"><i class="fas fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Oliver Kopyuv</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Transformer Combustion Defuser is ready</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">5:12PM</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-4">
+                                                        <label class="custom-control-label" for="msg-4"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Dr. John Cook PhD</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">PWS facts for patient #3245</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">4:31PM</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-5">
+                                                        <label class="custom-control-label" for="msg-5"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Sarah McBrook</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Are you coming to the after party?</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">3:43PM</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-6">
+                                                        <label class="custom-control-label" for="msg-6"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Lisa Hatchensen</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">The results for bloodwork</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">2:00PM</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-7">
+                                                        <label class="custom-control-label" for="msg-7"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Anothony Bezyeth</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Questions regarding accesskey</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">1:35PM</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-8">
+                                                        <label class="custom-control-label" for="msg-8"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Wrapbootstrap</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Your registration is complete</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">12:59PM</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-9">
+                                                        <label class="custom-control-label" for="msg-9"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Oliver Kopyuv</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Transformer Combustion Defuser is ready</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">12:12PM</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-10">
+                                                        <label class="custom-control-label" for="msg-10"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Dr. John Cook PhD</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">PWS facts for patient #3245</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">Yesterday</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-11">
+                                                        <label class="custom-control-label" for="msg-11"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Sarah McBrook</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Are you coming to the after party?</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">Yesterday</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-12">
+                                                        <label class="custom-control-label" for="msg-12"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Lisa Hatchensen</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">The results for bloodwork</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">Yesterday</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-13">
+                                                        <label class="custom-control-label" for="msg-13"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Anothony Bezyeth</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Questions regarding accesskey</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">Mar 12</div>
+                                                </div>
+                                            </li>
+                                            <li class="unread">
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-14">
+                                                        <label class="custom-control-label" for="msg-14"></label>
+                                                    </div>
+                                                    <a href="#" title="starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg color-warning-500 order-3 order-lg-2"><i class="fas fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Bloodworks Inc.</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Your results are here</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">Mar 3</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-15">
+                                                        <label class="custom-control-label" for="msg-15"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Oliver Kopyuv</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Transformer Combustion Defuser is ready</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">Feb 28</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-16">
+                                                        <label class="custom-control-label" for="msg-16"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Dr. John Cook PhD</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">PWS facts for patient #3245</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">Feb 18</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-17">
+                                                        <label class="custom-control-label" for="msg-17"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Sarah McBrook</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Are you coming to the after party?</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">Feb 12</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-18">
+                                                        <label class="custom-control-label" for="msg-18"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Lisa Hatchensen</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">The results for bloodwork</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">Feb 8</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-19">
+                                                        <label class="custom-control-label" for="msg-19"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Anothony Bezyeth</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Questions regarding accesskey</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">Feb 5</div>
+                                                </div>
+                                            </li>
+                                            <li class="unread">
+                                                <div class="d-flex align-items-center px-3 px-sm-4 px-lg-5 py-1 py-lg-0 height-4 height-mobile-auto">
+                                                    <div class="custom-control custom-checkbox mr-3 order-1">
+                                                        <input type="checkbox" class="custom-control-input" id="msg-20">
+                                                        <label class="custom-control-label" for="msg-20"></label>
+                                                    </div>
+                                                    <a href="#" title="Not starred" class="d-flex align-items-center py-1 ml-2 mt-4 mt-lg-0 ml-lg-0 mr-lg-4 fs-lg text-muted order-3 order-lg-2"><i class="fal fa-star"></i></a>
+                                                    <div class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
+                                                        <div class="row w-100">
+                                                            <a href="page_inbox_read.html" class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Password reset</a>
+                                                            <a href="page_inbox_read.html" class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Your password was changed</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fs-sm text-muted ml-auto hide-on-hover-parent order-4 position-on-mobile-absolute pos-top pos-right mt-2 mr-3 mr-sm-4 mt-lg-0 mr-lg-0">Jan 1</div>
+                                                </div>
                                             </li>
                                         </ul>
-                                    </div>
-                                </div>
-                                <div class="panel-container show">
-                                    <div class="panel-content border-faded border-left-0 border-right-0 border-top-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-7 col-xl-8">
-                                                <div class="position-relative">
-                                                    <div class="custom-control custom-switch position-absolute pos-top pos-left ml-5 mt-3 z-index-cloud">
-                                                        <input type="checkbox" class="custom-control-input" id="start_interval">
-                                                        <label class="custom-control-label" for="start_interval">Live Update</label>
-                                                    </div>
-                                                    <div id="updating-chart" style="height:242px"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5 col-xl-4 pl-lg-3">
-                                                <div class="d-flex mt-2">
-                                                    My Tasks
-                                                    <span class="d-inline-block ml-auto">130 / 500</span>
-                                                </div>
-                                                <div class="progress progress-sm mb-3">
-                                                    <div class="progress-bar bg-fusion-400" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    Transfered
-                                                    <span class="d-inline-block ml-auto">440 TB</span>
-                                                </div>
-                                                <div class="progress progress-sm mb-3">
-                                                    <div class="progress-bar bg-success-500" role="progressbar" style="width: 34%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    Bugs Squashed
-                                                    <span class="d-inline-block ml-auto">77%</span>
-                                                </div>
-                                                <div class="progress progress-sm mb-3">
-                                                    <div class="progress-bar bg-info-400" role="progressbar" style="width: 77%;" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    User Testing
-                                                    <span class="d-inline-block ml-auto">7 days</span>
-                                                </div>
-                                                <div class="progress progress-sm mb-g">
-                                                    <div class="progress-bar bg-primary-300" role="progressbar" style="width: 84%;" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <div class="row no-gutters">
-                                                    <div class="col-6 pr-1">
-                                                        <a href="#" class="btn btn-default btn-block">Generate PDF</a>
-                                                    </div>
-                                                    <div class="col-6 pl-1">
-                                                        <a href="#" class="btn btn-default btn-block">Report a Bug</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel-content p-0">
-                                        <div class="row row-grid no-gutters">
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                                <div class="px-3 py-2 d-flex align-items-center">
-                                                    <div class="js-easy-pie-chart color-primary-300 position-relative d-inline-flex align-items-center justify-content-center" data-percent="75" data-piesize="50" data-linewidth="5" data-linecap="butt" data-scalelength="0">
-                                                        <div class="d-flex flex-column align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-lg">
-                                                            <span class="js-percent d-block text-dark"></span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="d-inline-block ml-2 text-muted">
-                                                        SERVER LOAD
-                                                        <i class="fal fa-caret-up color-danger-500 ml-1"></i>
-                                                    </span>
-                                                    <div class="ml-auto d-inline-flex align-items-center">
-                                                        <div class="sparklines d-inline-flex" sparktype="line" sparkheight="30" sparkwidth="70" sparklinecolor="#886ab5" sparkfillcolor="false" sparklinewidth="1" values="5,6,5,3,8,6,9,7,4,2"></div>
-                                                        <div class="d-inline-flex flex-column small ml-2">
-                                                            <span class="d-inline-block badge badge-success opacity-50 text-center p-1 width-6">97%</span>
-                                                            <span class="d-inline-block badge bg-fusion-300 opacity-50 text-center p-1 width-6 mt-1">44%</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                                <div class="px-3 py-2 d-flex align-items-center">
-                                                    <div class="js-easy-pie-chart color-success-500 position-relative d-inline-flex align-items-center justify-content-center" data-percent="79" data-piesize="50" data-linewidth="5" data-linecap="butt">
-                                                        <div class="d-flex flex-column align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-lg">
-                                                            <span class="js-percent d-block text-dark"></span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="d-inline-block ml-2 text-muted">
-                                                        DISK SPACE
-                                                        <i class="fal fa-caret-down color-success-500 ml-1"></i>
-                                                    </span>
-                                                    <div class="ml-auto d-inline-flex align-items-center">
-                                                        <div class="sparklines d-inline-flex" sparktype="line" sparkheight="30" sparkwidth="70" sparklinecolor="#1dc9b7" sparkfillcolor="false" sparklinewidth="1" values="5,9,7,3,5,2,5,3,9,6"></div>
-                                                        <div class="d-inline-flex flex-column small ml-2">
-                                                            <span class="d-inline-block badge badge-info opacity-50 text-center p-1 width-6">76%</span>
-                                                            <span class="d-inline-block badge bg-warning-300 opacity-50 text-center p-1 width-6 mt-1">3%</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                                <div class="px-3 py-2 d-flex align-items-center">
-                                                    <div class="js-easy-pie-chart color-info-500 position-relative d-inline-flex align-items-center justify-content-center" data-percent="23" data-piesize="50" data-linewidth="5" data-linecap="butt">
-                                                        <div class="d-flex flex-column align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-lg">
-                                                            <span class="js-percent d-block text-dark"></span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="d-inline-block ml-2 text-muted">
-                                                        DATA TTF
-                                                        <i class="fal fa-caret-up color-success-500 ml-1"></i>
-                                                    </span>
-                                                    <div class="ml-auto d-inline-flex align-items-center">
-                                                        <div class="sparklines d-inline-flex" sparktype="line" sparkheight="30" sparkwidth="70" sparklinecolor="#51adf6" sparkfillcolor="false" sparklinewidth="1" values="3,5,2,5,3,9,6,5,9,7"></div>
-                                                        <div class="d-inline-flex flex-column small ml-2">
-                                                            <span class="d-inline-block badge bg-fusion-500 opacity-50 text-center p-1 width-6">10GB</span>
-                                                            <span class="d-inline-block badge bg-fusion-300 opacity-50 text-center p-1 width-6 mt-1">10%</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                                <div class="px-3 py-2 d-flex align-items-center">
-                                                    <div class="js-easy-pie-chart color-fusion-500 position-relative d-inline-flex align-items-center justify-content-center" data-percent="36" data-piesize="50" data-linewidth="5" data-linecap="butt">
-                                                        <div class="d-flex flex-column align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-lg">
-                                                            <span class="js-percent d-block text-dark"></span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="d-inline-block ml-2 text-muted">
-                                                        TEMP.
-                                                        <i class="fal fa-caret-down color-success-500 ml-1"></i>
-                                                    </span>
-                                                    <div class="ml-auto d-inline-flex align-items-center">
-                                                        <div class="sparklines d-inline-flex" sparktype="line" sparkheight="30" sparkwidth="70" sparklinecolor="#fd3995" sparkfillcolor="false" sparklinewidth="1" values="5,3,9,6,5,9,7,3,5,2"></div>
-                                                        <div class="d-inline-flex flex-column small ml-2">
-                                                            <span class="d-inline-block badge badge-danger opacity-50 text-center p-1 width-6">124</span>
-                                                            <span class="d-inline-block badge bg-info-300 opacity-50 text-center p-1 width-6 mt-1">40F</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <!-- end message list -->
                                     </div>
                                 </div>
                             </div>
+                            <!-- end inbox message -->
                         </div>
-                        <div class="col-lg-6">
-                            <div id="panel-2" class="panel" data-panel-fullscreen="false">
-                                <div class="panel-hdr">
-                                    <h2>
-                                        Smart Chat
-                                    </h2>
+                        <!-- end inbox container -->
+                        <!-- compose message -->
+                        <div id="panel-compose" class="panel w-100 position-fixed pos-bottom pos-right mb-0 z-index-cloud mr-lg-4 shadow-3 border-bottom-left-radius-0 border-bottom-right-radius-0 expand-full-height-on-mobile expand-full-width-on-mobile shadow" style="max-width:40rem; height:35rem; display: none;">
+                            <div class="position-relative h-100 w-100 d-flex flex-column">
+                                <!-- desktop view -->
+                                <div class="panel-hdr bg-fusion-600 height-4 d-none d-sm-none d-lg-flex">
+                                    <h4 class="flex-1 fs-lg color-white mb-0 pl-3">
+                                        New Message
+                                    </h4>
+                                    <div class="panel-toolbar pr-2">
+                                        <a href="javascript:void(0);" class="btn btn-icon btn-icon-light fs-xl mr-1" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen" data-placement="bottom">
+                                            <i class="fal fa-expand-alt"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" class="btn btn-icon btn-icon-light fs-xl" data-action="toggle" data-class="d-flex" data-target="#panel-compose" data-toggle="tooltip" data-original-title="Save & Close" data-placement="bottom">
+                                            <i class="fal fa-times"></i>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="panel-container show">
-                                    <div class="panel-content p-0">
-                                        <div class="d-flex flex-column">
-                                            <div class="bg-subtlelight-fade custom-scroll" style="height: 244px">
-                                                <div class="h-100">
-                                                    <!-- message -->
-                                                    <div class="d-flex flex-row px-3 pt-3 pb-2">
-                                                        <!-- profile photo : lazy loaded -->
-                                                        <span class="status status-danger">
-                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('assets/img/demo/avatars/avatar-j.png')"></span>
-                                                        </span>
-                                                        <!-- profile photo end -->
-                                                        <div class="ml-3">
-                                                            <a href="javascript:void(0);" title="Lisa Hatchensen" class="d-block fw-700 text-dark">Lisa Hatchensen</a>
-                                                            Hey did you meet the new board of director? He's a bit of a geek if you ask me...anyway here is the report you requested. I am off to launch with Lisa and Andrew, you wanna join?
-                                                            <!-- file download -->
-                                                            <div class="d-flex mt-3 flex-wrap">
-                                                                <div class="btn-group mr-1 mt-1" role="group" aria-label="Button group with nested dropdown ">
-                                                                    <button type="button" class="btn btn-default btn-xs btn-block px-1 py-1 fw-500" data-action="toggle">
-                                                                        <span class="d-block text-truncate text-truncate-sm">
-                                                                            <i class="fal fa-file-pdf mr-1 color-danger-700"></i> Report-2013-demographic-repo
-                                                                        </span>
-                                                                    </button>
-                                                                    <div class="btn-group" role="group">
-                                                                        <button id="btnGroupDrop1" type="button" class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                                                        <div class="dropdown-menu p-0 fs-xs" aria-labelledby="btnGroupDrop1">
-                                                                            <a class="dropdown-item px-3 py-2" href="#">Forward</a>
-                                                                            <a class="dropdown-item px-3 py-2" href="#">Open</a>
-                                                                            <a class="dropdown-item px-3 py-2" href="#">Delete</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="btn-group mr-1 mt-1" role="group" aria-label="Button group with nested dropdown ">
-                                                                    <button type="button" class="btn btn-default btn-xs btn-block px-1 py-1 fw-500" data-action="toggle">
-                                                                        <span class="d-block text-truncate text-truncate-sm">
-                                                                            <i class="fal fa-file-pdf mr-1 color-danger-700"></i> Bloodworks Patient 34124BA
-                                                                        </span>
-                                                                    </button>
-                                                                    <div class="btn-group" role="group">
-                                                                        <button id="btnGroupDrop2" type="button" class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                                                        <div class="dropdown-menu p-0 fs-xs" aria-labelledby="btnGroupDrop2">
-                                                                            <a class="dropdown-item px-3 py-2" href="#">Forward</a>
-                                                                            <a class="dropdown-item px-3 py-2" href="#">Open</a>
-                                                                            <a class="dropdown-item px-3 py-2" href="#">Delete</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- file download end -->
-                                                        </div>
-                                                    </div>
-                                                    <!-- message end -->
-                                                    <!-- message reply -->
-                                                    <div class="d-flex flex-row px-3 pt-3 pb-2">
-                                                        <!-- profile photo : lazy loaded -->
-                                                        <span class="status status-danger">
-                                                            <span class="profile-image rounded-circle d-inline-block" style="background-image:url('assets/img/demo/avatars/avatar-admin.png')"></span>
-                                                        </span>
-                                                        <!-- profile photo end -->
-                                                        <div class="ml-3">
-                                                            <a href="javascript:void(0);" title="Lisa Hatchensen" class="d-block fw-700 text-dark">Dr. Codex Lantern</a>
-                                                            Thanks for the file! You guys go ahead, I have to call some of my patients.
-                                                        </div>
-                                                    </div>
-                                                    <!-- message reply end -->
+                                <!-- end desktop view -->
+                                <!-- mobile view -->
+                                <div class="d-flex d-lg-none align-items-center px-3 py-3 bg-faded  border-faded border-top-0 border-left-0 border-right-0 flex-shrink-0">
+                                    <!-- button for mobile -->
+                                    <!-- end button for mobile -->
+                                    <h3 class="subheader-title">
+                                        New message
+                                    </h3>
+                                    <div class="ml-auto">
+                                        <button type="button" class="btn btn-outline-danger" data-action="toggle" data-class="d-flex" data-target="#panel-compose">Cancel</button>
+                                    </div>
+                                </div>
+                                <!-- end mobile view -->
+                                <div class="panel-container show rounded-0 flex-1 d-flex flex-column">
+                                    <div class="px-3">
+                                        <input id="message-to" type="text" placeholder="Recipients" class="form-control border-top-0 border-left-0 border-right-0 px-0 rounded-0 fs-md mt-2 pr-5" tabindex="2">
+                                        <a href="javascript:void(0)" class="position-absolute pos-right pos-top mt-3 mr-4" data-action="toggle" data-class="d-block" data-target="#message-to-cc" data-focus="message-to-cc" data-toggle="tooltip" data-original-title="Add Cc recipients" data-placement="bottom">Cc</a>
+                                        <input id="message-to-cc" type="text" placeholder="Cc" class="form-control border-top-0 border-left-0 border-right-0 px-0 rounded-0 fs-md mt-2 d-none" tabindex="3">
+                                        <input type="text" placeholder="Subject" class="form-control border-top-0 border-left-0 border-right-0 px-0 rounded-0 fs-md mt-2" tabindex="4">
+                                    </div>
+                                    <div class="flex-1" style="overflow-y: auto;">
+                                        <div id='fake_textarea' class="form-control rounded-0 w-100 h-100 border-0 py-3" contenteditable tabindex="5">
+                                            <br>
+                                            <br>
+                                            <div class="d-flex d-column align-items-start mb-3">
+                                                <img src="img/logo.png" alt="SmartAdmin WebApp" class="mr-3 mt-1">
+                                                <div class="border-left pl-3">
+                                                    <span class="fw-500 fs-lg d-block l-h-n">Dr. Codex Lantern</span>
+                                                    <span class="fw-400 fs-nano d-block l-h-n mb-1">Orthopedic Surgeon</span>
+                                                    <a href="#" class="mr-1 fs-xl" style="color:#3b5998"><i class="fab fa-facebook-square"></i></a>
+                                                    <a href="#" class="mr-1 fs-xl" style="color:#38A1F3"><i class="fab fa-twitter-square"></i></a>
+                                                    <a href="#" class="mr-1 fs-xl" style="color:#0077B5"><i class="fab fa-linkedin"></i></a>
+                                                    <a href="#" class="mr-1 fs-xl" style="color:#ff0000"><i class="fab fa-youtube-square"></i></a>
                                                 </div>
+                                            </div>
+                                            <div class="text-muted fs-nano">
+                                                ​PRIVATE AND CONFIDENTIAL. This e-mail, its contents and attachments are private and confidential and is intended for the recipient only. Any disclosure, copying or unauthorized use of such information is prohibited. If you receive this message in error, please notify us immediately and delete the original and any copies and attachments.
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="panel-content border-faded border-left-0 border-right-0 border-bottom-0 bg-faded">
-                                        <textarea rows="3" class="form-control rounded-top border-bottom-left-radius-0 border-bottom-right-radius-0 border" placeholder="write a reply..."></textarea>
-                                        <div class="d-flex align-items-center py-2 px-2 bg-white border border-top-0 rounded-bottom bg-primary">
-                                            <div class="btn-group dropup">
-                                                <button type="button" class="btn btn-icon fs-lg dropdown-toggle no-arrow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="fal fa-smile"></i>
-                                                </button>
-                                                <div class="dropdown-menu dropdown-menu-animated text-center rounded-pill overflow-hidden" style="width: 280px">
-                                                    <div class="px-1 py-0">
-                                                        <a href="javascript:void(0);" class="emoji emoji--like" data-toggle="tooltip" data-placement="top" title="" data-original-title="Like">
-                                                            <div class="emoji__hand">
-                                                                <div class="emoji__thumb"></div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="javascript:void(0);" class="emoji emoji--love" data-toggle="tooltip" data-placement="top" title="" data-original-title="Love">
-                                                            <div class="emoji__heart"></div>
-                                                        </a>
-                                                        <a href="javascript:void(0);" class="emoji emoji--haha" data-toggle="tooltip" data-placement="top" title="" data-original-title="Haha">
-                                                            <div class="emoji__face">
-                                                                <div class="emoji__eyes"></div>
-                                                                <div class="emoji__mouth">
-                                                                    <div class="emoji__tongue"></div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="javascript:void(0);" class="emoji emoji--yay" data-toggle="tooltip" data-placement="top" title="" data-original-title="Yay">
-                                                            <div class="emoji__face">
-                                                                <div class="emoji__eyebrows"></div>
-                                                                <div class="emoji__mouth"></div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="javascript:void(0);" class="emoji emoji--wow" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wow">
-                                                            <div class="emoji__face">
-                                                                <div class="emoji__eyebrows"></div>
-                                                                <div class="emoji__eyes"></div>
-                                                                <div class="emoji__mouth"></div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="javascript:void(0);" class="emoji emoji--sad" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sad">
-                                                            <div class="emoji__face">
-                                                                <div class="emoji__eyebrows"></div>
-                                                                <div class="emoji__eyes"></div>
-                                                                <div class="emoji__mouth"></div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="javascript:void(0);" class="emoji emoji--angry" data-toggle="tooltip" data-placement="top" title="" data-original-title="Angry">
-                                                            <div class="emoji__face">
-                                                                <div class="emoji__eyebrows"></div>
-                                                                <div class="emoji__eyes"></div>
-                                                                <div class="emoji__mouth"></div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="button" class="btn btn-icon fs-lg">
-                                                <i class="fal fa-paperclip"></i>
-                                            </button>
-                                            <div class="custom-control custom-checkbox custom-control-inline ml-auto hidden-sm-down">
-                                                <input type="checkbox" class="custom-control-input" id="defaultInline1">
-                                                <label class="custom-control-label" for="defaultInline1">Press <strong>ENTER</strong> to send</label>
-                                            </div>
-                                            <button class="btn btn-primary btn-sm ml-auto ml-sm-0">
-                                                Reply
-                                            </button>
+                                    <div class="px-3 py-4 d-flex flex-row align-items-center flex-wrap flex-shrink-0">
+                                        <a href="javascript:void(0);" class="btn btn-info mr-3">Send</a>
+                                        <a href="javascript:void(0);" class="btn btn-icon fs-xl mr-1" data-toggle="tooltip" data-original-title="Formatting options" data-placement="top">
+                                            <i class="fas fa-font color-fusion-300"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" class="btn btn-icon fs-xl mr-1" data-toggle="tooltip" data-original-title="Attach files" data-placement="top">
+                                            <i class="fas fa-paperclip color-fusion-300"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" class="btn btn-icon fs-xl mr-1" data-toggle="tooltip" data-original-title="Insert photo" data-placement="top">
+                                            <i class="fas fa-camera color-fusion-300"></i>
+                                        </a>
+                                        <div class="ml-auto">
+                                            <a href="javascript:void(0);" class="btn btn-icon fs-xl" data-toggle="tooltip" data-original-title="Disregard draft" data-placement="top">
+                                                <i class="fas fa-trash color-fusion-300"></i>
+                                            </a>
+                                            <a href="javascript:void(0);" class="btn btn-icon fs-xl width-1" data-toggle="tooltip" data-original-title="More options" data-placement="top">
+                                                <i class="fas fa-ellipsis-v-alt color-fusion-300"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="panel-3" class="panel">
-                                <div class="panel-hdr">
-                                    <h2 class="js-get-date"></h2>
-                                </div>
-                                <div class="panel-container show">
-                                    <div class="panel-content">
-                                        <div id="calendar"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div id="panel-4" class="panel">
-                                <div class="panel-hdr">
-                                    <h2>Bird's Eyes</h2>
-                                </div>
-                                <div class="panel-container show">
-                                    <div class="panel-content jqvmap-bg-ocean p-0" style="height: 330px;">
-                                        <div id="vector-map" class="w-100 h-100 p-4"></div>
-                                    </div>
-                                    <div class="panel-content jqvmap-bg-ocean">
-                                        <div class="d-flex align-items-center">
-                                            <img class="d-inline-block js-jqvmap-flag mr-3 border-faded" alt="flag" src="https://lipis.github.io/flag-icon-css/flags/4x3/us.svg" style="width:55px; height: auto;">
-                                            <h4 class="d-inline-block fw-300 m-0 text-muted fs-lg">
-                                                Showcasing information:
-                                                <small class="js-jqvmap-country mb-0 fw-500 text-dark">United States of America - $3,760,125.00</small>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="panel-5" class="panel">
-                                <div class="panel-hdr">
-                                    <h2>Subscriptions Hourly</h2>
-                                </div>
-                                <div class="panel-container show">
-                                    <div class="panel-content">
-                                        <h5>Subscription Views / hour</h5>
-                                        <div id="flotBar1" style="width: 100%; height: 160px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="panel-6" class="panel">
-                                <div class="panel-hdr">
-                                    <h2>Secession Scale </h2>
-                                </div>
-                                <div class="panel-container show">
-                                    <div class="panel-content p-0 mb-g">
-                                        <div class="alert alert-success alert-dismissible fade show border-faded border-left-0 border-right-0 border-top-0 rounded-0 m-0" role="alert">
-                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <span aria-hidden="true"><i class="fal fa-times"></i></span>
-                                            </button>
-                                            <strong>Last update was on <span class="js-get-date"></span></strong> - Your logs are all up to date.
-                                        </div>
-                                    </div>
-                                    <div class="panel-content">
-                                        <div class="row  mb-g">
-                                            <div class="col-md-6 d-flex align-items-center">
-                                                <div id="flotPie" class="w-100" style="height:250px"></div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-5 mr-lg-auto">
-                                                <div class="d-flex mt-2 mb-1 fs-xs text-primary">
-                                                    Current Usage
-                                                </div>
-                                                <div class="progress progress-xs mb-3">
-                                                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <div class="d-flex mt-2 mb-1 fs-xs text-info">
-                                                    Net Usage
-                                                </div>
-                                                <div class="progress progress-xs mb-3">
-                                                    <div class="progress-bar bg-info-500" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <div class="d-flex mt-2 mb-1 fs-xs text-warning">
-                                                    Users blocked
-                                                </div>
-                                                <div class="progress progress-xs mb-3">
-                                                    <div class="progress-bar bg-warning-500" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <div class="d-flex mt-2 mb-1 fs-xs text-danger">
-                                                    Custom cases
-                                                </div>
-                                                <div class="progress progress-xs mb-3">
-                                                    <div class="progress-bar bg-danger-500" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <div class="d-flex mt-2 mb-1 fs-xs text-success">
-                                                    Test logs
-                                                </div>
-                                                <div class="progress progress-xs mb-3">
-                                                    <div class="progress-bar bg-success-500" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <div class="d-flex mt-2 mb-1 fs-xs text-dark">
-                                                    Uptime records
-                                                </div>
-                                                <div class="progress progress-xs mb-3">
-                                                    <div class="progress-bar bg-fusion-500" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div> <!-- end compose message -->
                     </div>
                 </main>
                 <!-- this overlay is activated only when mobile menu is triggered -->
@@ -494,21 +583,22 @@
                                             <div class="icon-stack">
                                                 <i class="base base-7 icon-stack-3x opacity-100 color-success-500 "></i>
                                                 <i class="base base-7 icon-stack-2x opacity-100 color-success-300 "></i>
-                                                <i class="ni ni-envelope icon-stack-1x text-white"></i>
+                                                <i class="fal fa-truck icon-stack-1x text-white"></i>
                                             </div>
                                             <span class="app-list-name">
-                                                Inbox
+                                                TMS
                                             </span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="intel_introduction.html" class="app-list-item text-white border-0 m-0">
                                             <div class="icon-stack">
-                                                <i class="base base-7 icon-stack-2x opacity-100 color-primary-300 "></i>
-                                                <i class="fal fa-plus icon-stack-1x opacity-100 color-white"></i>
+                                                <i class="base base-7 icon-stack-3x opacity-100 color-warning-500 "></i>
+                                                <i class="base base-7 icon-stack-2x opacity-100 color-warning-300 "></i>
+                                                <i class="fal fa-file icon-stack-1x opacity-100 color-white"></i>  
                                             </div>
                                             <span class="app-list-name">
-                                                Add More
+                                                IMS
                                             </span>
                                         </a>
                                     </li>
@@ -520,27 +610,7 @@
             </div>
         </div>
     </div>
-    <nav class="shortcut-menu d-none d-sm-block">
-        <input type="checkbox" class="menu-open" name="menu-open" id="menu_open" />
-        <label for="menu_open" class="menu-open-button ">
-            <span class="app-shortcut-icon d-block"></span>
-        </label>
-        <a href="#" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Scroll Top">
-            <i class="fal fa-arrow-up"></i>
-        </a>
-        <a href="page_login-alt.html" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Logout">
-            <i class="fal fa-sign-out"></i>
-        </a>
-        <a href="#" class="menu-item btn" data-action="app-fullscreen" data-toggle="tooltip" data-placement="left" title="Full Screen">
-            <i class="fal fa-expand"></i>
-        </a>
-        <a href="#" class="menu-item btn" data-action="app-print" data-toggle="tooltip" data-placement="left" title="Print page">
-            <i class="fal fa-print"></i>
-        </a>
-        <a href="#" class="menu-item btn" data-action="app-voice" data-toggle="tooltip" data-placement="left" title="Voice command">
-            <i class="fal fa-microphone"></i>
-        </a>
-    </nav>
+    <app-menu></app-menu>
     <!-- END Quick Menu -->
     <!-- BEGIN Messenger -->
     <div class="modal fade js-modal-messenger modal-backdrop-transparent" tabindex="-1" role="dialog" aria-hidden="true">
@@ -856,207 +926,6 @@
         </div>
     </div> <!-- END Messenger -->
     <!-- BEGIN Page Settings -->
-    <div class="modal fade js-modal-settings modal-backdrop-transparent" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-right modal-md">
-            <div class="modal-content">
-                <div class="dropdown-header bg-trans-gradient d-flex justify-content-center align-items-center w-100">
-                    <h4 class="m-0 text-center color-white">
-                        Layout Settings
-                        <small class="mb-0 opacity-80">User Interface Settings</small>
-                    </h4>
-                    <button type="button" class="close text-white position-absolute pos-top pos-right p-2 m-1 mr-2" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fal fa-times"></i></span>
-                    </button>
-                </div>
-                <div class="modal-body p-0">
-                    <div class="settings-panel">
-                        <div class="mt-4 d-table w-100 px-5">
-                            <div class="d-table-cell align-middle">
-                                <h5 class="p-0">
-                                    App Layout
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="list" id="fh">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="header-function-fixed"></a>
-                            <span class="onoffswitch-title">Fixed Header</span>
-                            <span class="onoffswitch-title-desc">header is in a fixed at all times</span>
-                        </div>
-                        <div class="list" id="nff">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="nav-function-fixed"></a>
-                            <span class="onoffswitch-title">Fixed Navigation</span>
-                            <span class="onoffswitch-title-desc">left panel is fixed</span>
-                        </div>
-                        <div class="list" id="nfm">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="nav-function-minify"></a>
-                            <span class="onoffswitch-title">Minify Navigation</span>
-                            <span class="onoffswitch-title-desc">Skew nav to maximize space</span>
-                        </div>
-                        <div class="list" id="nfh">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="nav-function-hidden"></a>
-                            <span class="onoffswitch-title">Hide Navigation</span>
-                            <span class="onoffswitch-title-desc">roll mouse on edge to reveal</span>
-                        </div>
-                        <div class="list" id="nft">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="nav-function-top"></a>
-                            <span class="onoffswitch-title">Top Navigation</span>
-                            <span class="onoffswitch-title-desc">Relocate left pane to top</span>
-                        </div>
-                        <div class="list" id="mmb">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-main-boxed"></a>
-                            <span class="onoffswitch-title">Boxed Layout</span>
-                            <span class="onoffswitch-title-desc">Encapsulates to a container</span>
-                        </div>
-                        <div class="expanded">
-                            <ul class="">
-                                <li>
-                                    <div class="bg-fusion-50" data-action="toggle" data-class="mod-bg-1"></div>
-                                </li>
-                                <li>
-                                    <div class="bg-warning-200" data-action="toggle" data-class="mod-bg-2"></div>
-                                </li>
-                                <li>
-                                    <div class="bg-primary-200" data-action="toggle" data-class="mod-bg-3"></div>
-                                </li>
-                                <li>
-                                    <div class="bg-success-300" data-action="toggle" data-class="mod-bg-4"></div>
-                                </li>
-                            </ul>
-                            <div class="list" id="mbgf">
-                                <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-fixed-bg"></a>
-                                <span class="onoffswitch-title">Fixed Background</span>
-                            </div>
-                        </div>
-                        <div class="mt-4 d-table w-100 px-5">
-                            <div class="d-table-cell align-middle">
-                                <h5 class="p-0">
-                                    Mobile Menu
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="list" id="nmp">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="nav-mobile-push"></a>
-                            <span class="onoffswitch-title">Push Content</span>
-                            <span class="onoffswitch-title-desc">Content pushed on menu reveal</span>
-                        </div>
-                        <div class="list" id="nmno">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="nav-mobile-no-overlay"></a>
-                            <span class="onoffswitch-title">No Overlay</span>
-                            <span class="onoffswitch-title-desc">Removes mesh on menu reveal</span>
-                        </div>
-                        <div class="list" id="sldo">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="nav-mobile-slide-out"></a>
-                            <span class="onoffswitch-title">Off-Canvas <sup>(beta)</sup></span>
-                            <span class="onoffswitch-title-desc">Content overlaps menu</span>
-                        </div>
-                        <div class="mt-4 d-table w-100 px-5">
-                            <div class="d-table-cell align-middle">
-                                <h5 class="p-0">
-                                    Accessibility
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="list" id="mbf">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-bigger-font"></a>
-                            <span class="onoffswitch-title">Bigger Content Font</span>
-                            <span class="onoffswitch-title-desc">content fonts are bigger for readability</span>
-                        </div>
-                        <div class="list" id="mhc">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-high-contrast"></a>
-                            <span class="onoffswitch-title">High Contrast Text (WCAG 2 AA)</span>
-                            <span class="onoffswitch-title-desc">4.5:1 text contrast ratio</span>
-                        </div>
-                        <div class="list" id="mcb">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-color-blind"></a>
-                            <span class="onoffswitch-title">Daltonism <sup>(beta)</sup> </span>
-                            <span class="onoffswitch-title-desc">color vision deficiency</span>
-                        </div>
-                        <div class="list" id="mpc">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-pace-custom"></a>
-                            <span class="onoffswitch-title">Preloader Inside</span>
-                            <span class="onoffswitch-title-desc">preloader will be inside content</span>
-                        </div>
-                        <div class="mt-4 d-table w-100 px-5">
-                            <div class="d-table-cell align-middle">
-                                <h5 class="p-0">
-                                    Global Modifications
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="list" id="mcbg">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-clean-page-bg"></a>
-                            <span class="onoffswitch-title">Clean Page Background</span>
-                            <span class="onoffswitch-title-desc">adds more whitespace</span>
-                        </div>
-                        <div class="list" id="mhni">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-hide-nav-icons"></a>
-                            <span class="onoffswitch-title">Hide Navigation Icons</span>
-                            <span class="onoffswitch-title-desc">invisible navigation icons</span>
-                        </div>
-                        <div class="list" id="dan">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-disable-animation"></a>
-                            <span class="onoffswitch-title">Disable CSS Animation</span>
-                            <span class="onoffswitch-title-desc">Disables CSS based animations</span>
-                        </div>
-                        <div class="list" id="mhic">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-hide-info-card"></a>
-                            <span class="onoffswitch-title">Hide Info Card</span>
-                            <span class="onoffswitch-title-desc">Hides info card from left panel</span>
-                        </div>
-                        <div class="list" id="mlph">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-lean-subheader"></a>
-                            <span class="onoffswitch-title">Lean Subheader</span>
-                            <span class="onoffswitch-title-desc">distinguished page header</span>
-                        </div>
-                        <div class="list" id="mnl">
-                            <a href="#" onclick="return false;" class="btn btn-switch" data-action="toggle" data-class="mod-nav-link"></a>
-                            <span class="onoffswitch-title">Hierarchical Navigation</span>
-                            <span class="onoffswitch-title-desc">Clear breakdown of nav links</span>
-                        </div>
-                        <div class="list mt-1">
-                            <span class="onoffswitch-title">Global Font Size <small>(RESETS ON REFRESH)</small> </span>
-                            <div class="btn-group btn-group-sm btn-group-toggle my-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-sm" data-action="toggle-swap" data-class="root-text-sm" data-target="html">
-                                    <input type="radio" name="changeFrontSize"> SM
-                                </label>
-                                <label class="btn btn-default btn-sm" data-action="toggle-swap" data-class="root-text" data-target="html">
-                                    <input type="radio" name="changeFrontSize" checked=""> MD
-                                </label>
-                                <label class="btn btn-default btn-sm" data-action="toggle-swap" data-class="root-text-lg" data-target="html">
-                                    <input type="radio" name="changeFrontSize"> LG
-                                </label>
-                                <label class="btn btn-default btn-sm" data-action="toggle-swap" data-class="root-text-xl" data-target="html">
-                                    <input type="radio" name="changeFrontSize"> XL
-                                </label>
-                            </div>
-                            <span class="onoffswitch-title-desc d-block mb-g">Change <strong>root</strong> font size to effect rem values</span>
-                        </div>
-                        <div class="mt-2 d-table w-100 pl-5 pr-3">
-                            <div class="d-table-cell align-middle">
-                                <h5 class="p-0">
-                                    Theme colors <small>(overlays base css)</small>
-                                </h5>
-                                <div class="fs-xs text-muted p-2 alert alert-warning mt-3 mb-0">
-                                    <i class="fal fa-exclamation-triangle text-warning mr-2"></i>Due to network latency and CPU utilization, you may experience a brief flickering effect on page load which may show the intial applied theme for a split second. Setting the prefered style/theme in the header will prevent this from happening.
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="mb-0 mt-4">
-                        <div class="pl-5 pr-3 py-3 bg-faded">
-                            <div class="row no-gutters">
-                                <div class="col-6 pr-1">
-                                    <a href="#" class="btn btn-outline-danger fw-500 btn-block" data-action="app-reset">Reset Settings</a>
-                                </div>
-                                <div class="col-6 pl-1">
-                                    <a href="#" class="btn btn-danger fw-500 btn-block" data-action="factory-reset">Factory Reset</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <span id="saving"></span>
-                </div>
-            </div>
-        </div>
-    </div> 
+  <app-interface-settings></app-interface-settings>
 </div>
 

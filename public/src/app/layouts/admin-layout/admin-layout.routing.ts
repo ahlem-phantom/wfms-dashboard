@@ -1,21 +1,27 @@
 import { Routes } from '@angular/router';
+import { AdminLayoutComponent } from './admin-layout.component';
+import { InboxComponent } from './inbox/inbox.component';
 
 
 
 export const AdminLayoutRoutes: Routes = [
-    // {
-    //   path: '',
-    //   children: [ {
-    //     path: 'dashboard',
-    //     component: DashboardComponent
-    // }]}, {
-    // path: '',
-    // children: [ {
-    //   path: 'userprofile',
-    //   component: UserProfileComponent
-    // }]
-    // }, {
-    //   path: '',
+     {
+       path: '',
+       children: [ {
+         path: 'dashboard',
+         component: AdminLayoutComponent
+     }
+    ]
+},
+     
+     {
+     path: '',
+     children: [ {
+       path: 'inbox',
+       component: InboxComponent
+     }]
+     }
+    //, {   path: '',
     //   children: [ {
     //     path: 'icons',
     //     component: IconsComponent
